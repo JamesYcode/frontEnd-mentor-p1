@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(210, 46%, 95%);
+  font-size: 13px;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card-container {
+  max-width: 375px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.content-container {
+  padding: 2rem;
+}
+
+.img {
+  padding: 0;
+  width: 100%;
+  border-top-right-radius: 10px;
+}
+
+.title {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+.description {
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-img {
+  flex-grow: 1;
+  max-width: 3rem;
+  border-radius: 100%;
+}
+
+.profile-sub {
+  flex-grow: 3;
+  margin-left: 1em;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  letter-spacing: 0.35px;
+}
+
+.profile-sub p:last-child {
+  margin-top: -0.55rem;
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+}
+
+.profile-btn-container {
+  flex: 1;
+  cursor: pointer;
+}
+
+.profile-btn-container-mobile {
+  cursor: pointer;
+}
+
+.profile-btn {
+  display: block;
+  margin: 0 auto;
+  width: 2.2rem;
+}
+
+.attribution {
+  margin-top: 2em;
+}
+
+.connect-container-mobile {
+  background-color: hsl(217, 19%, 35%);
+  width: 100%;
+  height: 15.5%;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  border-radius: 10px;
+  display: none;
+}
+
+.active-mobile {
+  display: block;
+}
+
+.connect-desktop {
+  display: none;
+}
+
+.connect-mobile {
+  color: hsl(212, 23%, 69%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.connect-mobile span:first-child {
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+}
+
+.connect span:first-child {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1440px) {
+  .card-container {
+    max-width: 850px;
+    display: flex;
+    position: static;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .profile-container {
+    position: relative;
+  }
+
+  .profile-btn-container {
+    transition: all 0.3s;
+  }
+
+  .profile-btn-container:hover {
+    transform: scale(1.2);
+  }
+
+  .connect-container-desktop {
+    background-color: hsl(217, 19%, 35%);
+    width: 55%;
+    position: absolute;
+    top: -75px;
+    right: -90px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .connect-desktop span:first-child {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  .active-desktop {
+    display: block;
+  }
+
+  .active-mobile {
+    display: none;
+  }
+
+  .connect-desktop {
+    color: hsl(212, 23%, 69%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em;
+  }
+
+  .connect-desktop::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(217, 19%, 35%);
+  }
+}
